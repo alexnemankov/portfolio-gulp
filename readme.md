@@ -1,3 +1,3 @@
-npm install - install npm modules
-gulp - start gulp project
-gulp build - build project in dist directory
+npm install - install npm modules <br/>
+gulp - start gulp project <br/>
+gulp build - build project in dist directory <br/>
