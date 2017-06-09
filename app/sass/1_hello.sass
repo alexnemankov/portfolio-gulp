@@ -1,0 +1,54 @@
+@import "mixins"
+@import "vars"
+
+
+
+.main-page-block
+  background-color: $white
+  border-radius: 10px
+  width: 300px
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-left: -150px
+  margin-top: -150px
+  box-shadow: 0 2px 2px rgba(0,0,0,0.3)
+
+
+.main-page-block-image
+  min-height: 70px
+  position: relative
+  img
+    display: block
+    position: absolute
+    width: 140px
+    border-radius: 50%
+    bottom: 0
+    left: 50%
+    margin-left: -70px
+    border: 1px solid #bebebe
+
+.main-page-block-name
+  text-align: center
+  font-size: 21px
+  padding: 15px 30px
+  line-height: 1.3
+
+.main-page-block-link
+  text-align: center
+  padding: 20px 0px
+  background-color: $blue
+  border-radius: 0px 0px 10px 10px
+  a
+    display: inline-block
+    color: $white
+    text-decoration: none
+    padding: 5px 10px
+    border-radius: 30px
+    border: 2px solid $white
+    font-weight: 500
+    font-size: 14px
+    transition: .3s
+    &:hover
+      background-color: $white
+      color: $blue
