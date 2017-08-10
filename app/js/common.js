@@ -1,5 +1,5 @@
-$(function() {
+$(document).ready(function () {
+    $('h1').on('click', function () {
 
-    $('.single-item').slick();
-
+    });
 });

@@ -1,0 +1,89 @@
+/*************************************************************************************************
+  CLEARFIX
+**************************************************************************************************/
+
+@mixin clearfix {
+
+  &:after {
+
+  content: "";
+    display: table;
+    clear: both;
+}
+}
+
+/*************************************************************************************************
+  FONT-SIZE TO REM
+**************************************************************************************************/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+/*************************************************************************************************
+  MEDIA QUERIES
+**************************************************************************************************/
+
+$mobile : '(max-width: 768px)';
+$tablet: '(min-width: 768px) and (max-width: 979px)';
+$large-desktop: '(min-width: 1200px)';
+$non-retina: 'screen and (-webkit-max-device-pixel-ratio: 1)';
+
+@mixin media($media) {
+  @media only screen and #{$media} {
+    @content;
+  }
+}
+
+
+//@include media($mobile)
+//@include media($tablet)
+//@include media($large-desctop)
+//@include media($non-retina)
+
+
+/*************************************************************************************************
+  ALIGN VERTICAL
+**************************************************************************************************/
+
+@mixin x-center() {
+  position:absolute;
+  left:50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@mixin y-center() {
+  position:absolute;
+  top:50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin xy-center() {
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*************************************************************************************************
+  HOVER / ACTIVE / FOCUS STATES
+**************************************************************************************************/
+
+@mixin hover {
+  &:hover,
+  &:active,
+  &:focus { @content; }
+}
